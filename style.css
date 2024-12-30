@@ -108,7 +108,7 @@ nav>ul>li>a::after
 }
 
 .about{
-    background-image: url(/images/about\ bg.jpg);
+    background-image: url(/about\ bg.jpg);
     height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
