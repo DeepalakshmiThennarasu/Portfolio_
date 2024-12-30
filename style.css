@@ -1,0 +1,300 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", serif;
+}
+
+  
+
+body
+{
+    overflow-x: hidden;
+}
+
+nav{
+    background-image: linear-gradient(to left,#616466,#151718);
+}
+
+nav ul li a{
+    color: white;
+    margin-right: 10px;
+    transition: 5s ease;
+}
+
+nav ul li a:hover{
+    border-bottom: 2px solid white;
+}
+
+nav img{
+    width: 60px;
+    height: 60px;
+    background-color:white;
+    border-radius: 50%;
+}
+
+.navbar-toggler{
+    color: white;
+}
+
+/* nav>ul>li>a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0px 25px;
+    font-family: Lucida Bright;
+    font-weight: bold;
+
+}
+
+
+nav>ul>li>a::after
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -4px;
+    height: 4px;
+    background-color: white;
+    left: 0;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+} */
+
+/* nav>ul>li>a:hover::after
+{
+    transform: scaleX(1);
+} */
+
+.Inro-page{
+    height: 100vh;
+    background: linear-gradient(50deg,#8a3a3a,#ff3333);
+}
+
+.Intro-image img
+{
+    width: 400px;
+    height: 430px;
+    /* right: 18px;
+    top: 10px; */
+    /* margin-bottom: -4px; */
+    position: relative;
+    border-radius: 230px 0 230px 0;
+    transition: 1s;
+
+}
+.Intro-image img:hover
+{
+    border: none;
+    transform: translate(5px);
+    /* box-shadow: 8px 8px 8px  8px whitesmoke; */
+}
+
+.intro-name button{
+    color: white;
+    background-color:black;
+    color: rgb(250, 250, 250);
+    font-family: serif;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-radius: 20px;
+
+}
+.intro-name button:hover
+{
+    background-color:white;
+    color:black;
+}
+
+.about{
+    background-image: url(/images/about\ bg.jpg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.about-card{
+    position: absolute;
+   border-radius: 10px;
+   /* bottom: 55px; */
+   /* filter: drop-shadow(0 0 10px white); */
+    /* backdrop-filter: saturate(180%)blur(2px); */
+    transition: 2s ease-in-out;
+}
+
+.about-body{
+    background-color: rgba(0, 0, 0, 0.486);
+    border-radius: 10px;
+}
+
+.about-card:hover
+{
+transform: translateY(5px);
+box-shadow: 8px 8px 8px  8px rgb(125, 124, 124);
+}
+
+#skill{
+    background-color: grey;
+}
+
+.skill-title{
+    background-color: white;
+    width: 75px;
+    border-radius: 10px;
+}
+
+.card-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden; /* Ensures smooth transitions */
+}
+
+.front-card {
+    background: #f8f9fa; /* Light gray background for front */
+    z-index: 2;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back-card {
+    background: whitesmoke;
+    opacity: 0;
+    z-index: 1;
+    transform: translateY(20px); /* Slightly below the front card */
+}
+
+.card-container:hover .front-card {
+    opacity: 0.7; /* Makes the front card partially visible */
+    transform: translateY(-10px); /* Slightly moves up */
+    box-shadow: 0 0 5px whitesmoke,20px 0 80px #f0f,-20px 0 80px #0ff;
+
+}
+
+.card-container:hover .back-card {
+    opacity: 1; /* Fully reveals the back card */
+    transform: translateY(0); /* Moves back card into view */
+
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #333;
+}
+    
+.project-card {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.project-card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.project-overlay a {
+    background: white;
+    color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-overlay a:hover {
+    background: gray;
+    color: white;
+}
+
+#contact{
+    background-color: lightgoldenrodyellow;
+}
+
+.contact h1 {
+    font-family: 'Cambria', serif;
+    color: #333;
+}
+
+.con-con p {
+    margin: 0;
+    color: crimson;
+    font-weight: bold;
+    font-family: 'Cambria', serif;
+    text-align: center;
+}
+
+.con-con a {
+    text-decoration: none;
+    color: crimson;
+}
+
+.con-con a:hover {
+    text-decoration: underline;
+}
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
